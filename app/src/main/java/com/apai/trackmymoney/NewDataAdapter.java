@@ -16,12 +16,13 @@ import java.util.ArrayList;
 
 public class NewDataAdapter extends BaseAdapter {
     Context context;
-    ArrayList<NewData>  newDataArrayList;
-    public NewDataAdapter(Context context,ArrayList<NewData>  newDataArrayList)
-    {
+    ArrayList<NewData> newDataArrayList;
+
+    public NewDataAdapter(Context context, ArrayList<NewData> newDataArrayList) {
         this.context = context;
         this.newDataArrayList = newDataArrayList;
     }
+
     @Override
     public int getCount() {
         return newDataArrayList.size();
@@ -39,15 +40,16 @@ public class NewDataAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null)
-        {
-            convertView= LayoutInflater.from(context).inflate(R.layout.summary_textbox,parent,false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.summary_textbox, parent, false);
         }
-        TextView merchant = (TextView)convertView.findViewById(R.id.merchantsTextBox);
-        TextView amount = (TextView)convertView.findViewById(R.id.summaryAmountTextBox);
-        final NewData newData = (NewData)this.getItem(position);
-        merchant.setText("Merchant : " +newData.getMerchant());
-        amount.setText("Amount : " +newData.getAmount());
+        TextView merchant = (TextView) convertView.findViewById(R.id.merchantsTextBox);
+        TextView amount = (TextView) convertView.findViewById(R.id.summaryAmountTextBox);
+        TextView category = (TextView) convertView.findViewById(R.id.categoryToDisplayTextBox);
+        final NewData newData = (NewData) this.getItem(position);
+        merchant.setText("Merchant : " + newData.getMerchant());
+        amount.setText("Amount : " + newData.getAmount());
+        category.setText("Category : " + newData.getCategory());
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

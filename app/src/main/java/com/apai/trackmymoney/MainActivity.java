@@ -29,14 +29,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Button showSummaryButton = (Button) findViewById(R.id.showSummary);
-        showSummaryButton.setOnClickListener(new View.OnClickListener()
-                {
-                    public void  onClick(View view)
-                    {
-                        Intent intent = new Intent(view.getContext(), SummaryActivity.class);
-                        view.getContext().startActivity(intent);
-                    }
-                    }
+        showSummaryButton.setOnClickListener(new View.OnClickListener() {
+                                                 public void onClick(View view) {
+                                                     Intent intent = new Intent(view.getContext(), SummaryActivity.class);
+                                                     view.getContext().startActivity(intent);
+                                                 }
+                                             }
 
         );
     }
