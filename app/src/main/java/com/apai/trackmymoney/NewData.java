@@ -10,16 +10,18 @@ public class NewData {
     String merchant; // where did you spend
     String amount;
 
-    public NewData() {
+    public NewData()
+{
 
-    }
+}
 
-    public NewData(String category, String merchant, String amount) {
-        this.category = category;
-        this.merchant = merchant;
-        this.amount = amount;
+public NewData(String category, String merchant, String amount)
+{
+    this.category = category;
+    this.merchant = merchant;
+    this.amount = amount;
 
-    }
+}
 
     public String getCategory() {
         return category;

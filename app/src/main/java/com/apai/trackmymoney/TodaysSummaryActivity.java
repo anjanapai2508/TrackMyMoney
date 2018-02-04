@@ -20,7 +20,6 @@ public class TodaysSummaryActivity extends AppCompatActivity {
     FireBaseHelper fireBaseHelper;
     NewDataAdapter newDataAdapter;
     ArrayList<NewData> dataListToDisplay;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,8 @@ public class TodaysSummaryActivity extends AppCompatActivity {
         dbReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot newDataSnapshot : dataSnapshot.getChildren()) {
+                for(DataSnapshot newDataSnapshot : dataSnapshot.getChildren())
+                {
                     NewData newData = newDataSnapshot.getValue(NewData.class);
                     dataListToDisplay.add(newData);
                 }
@@ -52,5 +52,5 @@ public class TodaysSummaryActivity extends AppCompatActivity {
     }
 
 
-}
+    }
 

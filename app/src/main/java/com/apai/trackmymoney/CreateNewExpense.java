@@ -109,9 +109,11 @@ public class CreateNewExpense extends AppCompatActivity {
                             }
                         });
                         Button dialogNoButton = (Button) dialogBox.findViewById(R.id.createDialogNoButton);
-                        dialogNoButton.setOnClickListener(new View.OnClickListener() {
+                        dialogNoButton.setOnClickListener(new View.OnClickListener()
+                        {
                             @Override
-                            public void onClick(View view) {
+                            public void onClick(View view)
+                            {
 
                                 Intent intent = new Intent(view.getContext(), MainActivity.class);
                                 view.getContext().startActivity(intent);

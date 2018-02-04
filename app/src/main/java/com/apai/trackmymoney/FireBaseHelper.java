@@ -34,7 +34,7 @@ public class FireBaseHelper {
 
                 newDataAdapter.notifyDataSetChanged();
 
-            } catch (DatabaseException e) {
+            } catch(DatabaseException e) {
                 e.printStackTrace();
                 saved = false;
             }

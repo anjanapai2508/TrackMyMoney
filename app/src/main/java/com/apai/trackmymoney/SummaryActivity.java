@@ -10,13 +10,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class SummaryActivity extends AppCompatActivity {
+public class SummaryActivity extends AppCompatActivity
+        {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
-        Button todaysSummary = (Button) findViewById(R.id.todaysSummary);
+        Button todaysSummary = (Button)findViewById(R.id.todaysSummary);
         todaysSummary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +25,7 @@ public class SummaryActivity extends AppCompatActivity {
                 view.getContext().startActivity(intent);
             }
         });
-        Button thisMonthSummary = (Button) findViewById(R.id.monthsSummary);
+        Button thisMonthSummary = (Button)findViewById(R.id.monthsSummary);
         Button goBackToMainPageButton = (Button) findViewById(R.id.goBackToMainPageButton);
         goBackToMainPageButton.setOnClickListener(new View.OnClickListener() {
             @Override
